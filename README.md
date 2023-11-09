@@ -1,4 +1,4 @@
-# Stochastic_Neighbor-_Embedding
+# Stochastic_Neighbor_Embedding
 
 学校の課題用リポジトリ
 

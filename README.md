@@ -2,4 +2,4 @@
 
 学校の課題用リポジトリ
 
-あらかじめ用意されたデータにをStochastic_Neighbor-_Embedding実施し、データに対し次元削減を行う。
+あらかじめ用意されたデータにをStochastic_Neighbor_Embedding実施し、データに対し次元削減を行う。

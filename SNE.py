@@ -1,5 +1,6 @@
 import numpy as np
 import illustrator as ill
+import eigen_module as em
 
 #データの取得
 X = np.loadtxt('data.csv')

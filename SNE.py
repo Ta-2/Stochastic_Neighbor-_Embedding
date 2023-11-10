@@ -101,7 +101,7 @@ def grad(X, Y, i, sigmas):
     return 2*np.dot(pq, y_i)[0]
 
 KL = []
-for i in range(2000):
+for i in range(1000):
     gradient = np.array([grad(X, compressed_data, i, sigmas) for i in range(row)])
     compressed_data -= 0.01 * gradient
     #print("KLdivergence: ")
@@ -111,6 +111,8 @@ for i in range(2000):
 print("KLdivergence: ")
 print(KLdivergence(X, compressed_data, sigmas))
 
-fig, ax = plt.subplots()
-ax.plot(KL)
+
+plt.plot(KL)
 plt.show()
+
+ill.illustrate(compressed_data, margin=0.3)

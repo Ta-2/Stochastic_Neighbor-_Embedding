@@ -49,4 +49,4 @@ def show():
 def seve_animation(frames, filename):
     ani = ArtistAnimation(plt.gcf(), frames, interval=10)
     ani.save(filename + ".gif", writer='pillow')
-    plt.cla()
+    plt.show()

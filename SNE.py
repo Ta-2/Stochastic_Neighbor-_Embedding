@@ -86,7 +86,7 @@ def KLdivergence(X, Y, sigmas):
 
         amount_info = p_ji * np.log2(p_ji / q_ji)
 
-        return sum(amount_info)
+    return sum(amount_info)
 
 #各データのエントロピーがlog_perpと等しくなるsigma(分散)を二分探索
 sigmas = [
@@ -122,6 +122,7 @@ def SNE(X, dim):
     frames.append(ill.illustrate(Y, margin=0.3))
     #コストの変化のリスト
     KL = []
+    cost = KLdivergence(X, Y, sigmas)
     KL.append(KLdivergence(X, Y, sigmas))
 
     #モメンタム項付き勾配降下法で最適化
@@ -140,6 +141,7 @@ def SNE(X, dim):
 
         #収束条件を見たいしていたらbreak
         if(abs(new_cost - cost) < threshold):
+            print("number of loop: " + str(i))
             break
 
         #次のループへの準備
